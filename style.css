@@ -28,7 +28,7 @@ body {
 .hero-background {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: url('/images/bg.jpg') no-repeat center center/cover;
+    background: url('images/bg.jpg') no-repeat center center/cover;
     z-index: -2;
 }
 
@@ -157,16 +157,16 @@ input[type="email"] {
 }
 
 /* Card Backgrounds */
-.card-1 { background-image: url('/images/1.jpg'); }
-.card-2 { background-image: url('/images/2.jpg'); }
-.card-3 { background-image: url('/images/3.jfif'); }
-.card-4 { background-image: url('/images/4.jpg'); }
-.card-5 { background-image: url('/images/5.jfif'); }
-.card-6 { background-image: url('/images/6.jpg'); }
-.card-7 { background-image: url('/images/7.jpg'); }
-.card-8 { background-image: url('/images/8.jpg'); }
-.card-9 { background-image: url('/images/9.jpg'); }
-.card-10 { background-image: url('/images/10.jpg');}
+.card-1 { background-image: url('images/1.jpg'); }
+.card-2 { background-image: url('images/2.jpg'); }
+.card-3 { background-image: url('images/3.jfif'); }
+.card-4 { background-image: url('images/4.jpg'); }
+.card-5 { background-image: url('images/5.jfif'); }
+.card-6 { background-image: url('images/6.jpg'); }
+.card-7 { background-image: url('images/7.jpg'); }
+.card-8 { background-image: url('images/8.jpg'); }
+.card-9 { background-image: url('images/9.jpg'); }
+.card-10 { background-image: url('images/10.jpg');}
 
 /* Card Popup after clicking on a card of the picture */
 
@@ -216,7 +216,7 @@ input[type="email"] {
     height: 500px;
     width: 100%;
     /* REPLACE with your Stranger Things image */
-    background: url('/images/1.jpg') no-repeat top center/cover;
+    background: url('images/1.jpg') no-repeat top center/cover;
     position: relative;
 }
 
