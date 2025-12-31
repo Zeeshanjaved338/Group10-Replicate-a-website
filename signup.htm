@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="signin-body">
+    
+    <div class="signin-background"></div>
+    <div class="signin-overlay"></div>
+
+    <header class="signin-header">
+        <a href="index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+        </a>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Sign In</h1>
+            <form>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Email or mobile number" required>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="signin-submit-btn">Sign In</button>
+
+                <div class="separator">OR</div>
+
+                <button type="button" class="signin-code-btn">Use a Sign-In Code</button>
+
+                <div class="forgot-pass">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <div class="signup-now">
+                    New to Netflix? <a href="index.html">Sign up now.</a>
+                </div>
+
+                <div class="recaptcha-text-small">
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                    <a href="#">Learn more.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+       
+       
+       /*  HERE WE SIGN IN PAGE STYLES */
+.signin-body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND IMAGE STYLING WE DONE HERE */
+.signin-background {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('/images/bg.jpg') ;
+    z-index: -2;
+    opacity: 1; 
+}
+
+/* IN THIS STYLING WE APPLY DARK LAYER OVER BG IMAGE */
+.signin-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    /* Lighter black overlay so the image shows through */
+    background: rgba(0, 0, 0, 0.4); 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: -1;
+}
+
+.signin-header {
+    padding: 20px 3%; 
+}
+
+.signin-header .logo {
+    width: 160px;
+}
+
+/* Center the box */
+.login-container {
+    display: flex;
+    justify-content: center;
+
+/* Black Card Styling */
+.login-box {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px 48px 10px;
+    max-width: 450px;
+}
+
+.login-box h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #fff;
+    text-align: left;
+}
+
+/* Input Fields  */
+.input-wrapper {
+    margin-bottom: 16px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 50px;
+    background: #161616;
+    border: 1px solid #333; 
+    border-radius: 4px;
+    color: white;
+    padding: 0 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-wrapper input::placeholder {
+    color: #8c8c8c;
+}
+
+.input-wrapper input:focus {
+    background: #454545;
+}
+
+/* Red Button */
+.signin-submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #e50914;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.signin-submit-btn:hover {
+    background-color: #c11119;
+}
+
+/* Separator */
+.separator {
+    text-align: center;
+    color: #b3b3b3;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Grey Button */
+.signin-code-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.signin-code-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* fORGOT PASSWORD SECTION STLING */
+.forgot-pass {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forgot-pass a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.forgot-pass a:hover { text-decoration: underline; }
+
+/* Remember Me */
+.remember-me {
+    display: flex; align-items: center; margin-bottom: 15px;
+}
+.remember-me input {
+    width: 18px; 
+    height: 18px; 
+    margin-right: 5px; 
+    accent-color: #b3b3b3;
+}
+.remember-me label { 
+    color: #b3b3b3; 
+    font-size: 0.9rem; 
+}
+
+/* Bottom Links */
+.signup-now {
+    color: #737373; 
+    font-size: 1rem;
+     margin-top: 16px;
+      text-align: left;
+}
+.signup-now a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: 500;
+}
+.signup-now a:hover { 
+    text-decoration: underline;
+ }
+
+.recaptcha-text-small {
+    margin-top: 15px;
+     font-size: 0.8rem; 
+     color: #8c8c8c; 
+     text-align: left; 
+     line-height: 1.4;
+}
+.recaptcha-text-small a { 
+    color: #0071eb; 
+    text-decoration: none;
+ }
+    </style>
+
+</body>
+</html>

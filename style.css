@@ -1,0 +1,591 @@
+/* =========================================
+   GLOBAL RESET & DEFAULTS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('/images/bg.jpg') no-repeat center center/cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.8) 100%);
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+}
+
+.logo { width: 150px; }
+
+/* The small red button in the header */
+.btn-signup {
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    padding: 7px 17px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-signup:hover { background-color: #c11119; }
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 { font-size: 3rem; font-weight: 900; margin-bottom: 1rem; }
+.subtitle { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.cta-text { font-size: 1.2rem; margin-bottom: 1.2rem; }
+
+/* =========================================
+   INPUTS & BUTTONS (Unified Style)
+   ========================================= */
+.email-signup, .footer-email-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.input-container { flex: 1; }
+
+input[type="email"] {
+    width: 100%;
+    height: 56px;
+    padding: 10px 15px;
+    background: rgba(22, 22, 22, 0.7);
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.get-started-btn {
+    height: 56px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 0 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.get-started-btn:hover { background-color: #c11119; }
+.get-started-btn span { margin-left: 10px; font-size: 2rem; line-height: 0; margin-top: -3px; }
+
+/* =========================================
+   TRENDING SECTION
+   ========================================= */
+.trending-section { padding: 50px; background-color: #000; }
+.section-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; }
+
+.card-container {
+    display: flex; gap: 30px; overflow-x: auto; padding: 20px 0;
+    scrollbar-width: none; 
+}
+.card-container::-webkit-scrollbar { display: none; }
+
+.movie-card {
+    position: relative;
+    min-width: 180px; height: 250px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.movie-card:hover { transform: scale(1.05); }
+
+.card-image-placeholder {
+    width: 140px; height: 100%;
+    background-color: #333; 
+    border-radius: 8px; margin-left: auto; 
+    background-size: cover; background-position: center;
+    border: 1px solid #444; 
+}
+
+.card-number {
+    position: absolute; left: -0.5px; bottom: 5px;
+    font-size: 6.5rem; font-weight: 900; color: #000;
+    -webkit-text-stroke: 2px #555; z-index: 1; line-height: 1;
+}
+
+/* Card Backgrounds */
+.card-1 { background-image: url('/images/1.jpg'); }
+.card-2 { background-image: url('/images/2.jpg'); }
+.card-3 { background-image: url('/images/3.jfif'); }
+.card-4 { background-image: url('/images/4.jpg'); }
+.card-5 { background-image: url('/images/5.jfif'); }
+.card-6 { background-image: url('/images/6.jpg'); }
+.card-7 { background-image: url('/images/7.jpg'); }
+.card-8 { background-image: url('/images/8.jpg'); }
+.card-9 { background-image: url('/images/9.jpg'); }
+.card-10 { background-image: url('/images/10.jpg');}
+
+/* Card Popup after clicking on a card of the picture */
+
+/* POPUP OVERLAY STyling  */
+
+/* 1. The Overlay: Covers the whole screen but is hidden by default */
+.modal-overlay {
+    display: none; /* Hidden */
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    /* Transparent black background lets you see the page behind it */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. THE TRICK: Show modal when the ID is targeted */
+.modal-overlay:target {
+    display: flex;
+}
+
+/* 3. Clickable area to close modal */
+.close-area {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    cursor: default;
+}
+
+/* 4. The Card Box */
+.modal-card {
+    position: relative;
+    width: 90%;
+    max-width: 850px;
+    background-color: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    z-index: 10000; /* Sit on top of the overlay */
+}
+
+/* 5. Banner Image */
+.modal-banner {
+    height: 500px;
+    width: 100%;
+    /* REPLACE with your Stranger Things image */
+    background: url('/images/1.jpg') no-repeat top center/cover;
+    position: relative;
+}
+
+/* Gradient Fade */
+.modal-gradient {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, #181818 10%, rgba(24,24,24,0.5) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* 6. Close 'X' Button */
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+    z-index: 10001;
+}
+
+/* 7. Text Content */
+.modal-content {
+    position: absolute;
+    bottom: 40px; left: 40px; right: 40px;
+    color: white;
+}
+
+/* Stranger Things Title Style */
+.st-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.modal-tags {
+    display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+}
+
+.tag {
+    color: #d2d2d2;
+    background-color: rgba(80, 80, 80, 0.6);
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    border-radius: 3px;
+}
+
+.border-tag {
+    border: 1px solid #999;
+    background-color: transparent;
+    color: #fff;
+}
+
+.modal-desc {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    max-width: 90%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.red-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+}
+
+.red-btn:hover { background-color: #c11119; }
+.red-btn span { font-size: 1.4rem; line-height: 0.8; }
+
+
+/* =========================================
+   REASONS SECTION (Matching the Picture)
+   ========================================= */
+
+.reasons-section { 
+    padding: 60px 10%; /* Increased padding for better spacing */
+    background-color: #000;
+    color: #fff;
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.reasons-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 16px; /* Slightly larger gap */
+}
+
+.reason-card {
+    /* Standard Netflix gradient */
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    border-radius: 16px; /* INCREASED radius to match the rounded look in the image */
+    padding: 32px 24px; /* More padding inside the card */
+    min-height: 280px; 
+    display: flex; 
+    flex-direction: column;
+    position: relative;
+    border: none; /* Ensure no border */
+}
+
+.reason-card h3 {
+    font-size: 1.5rem;
+    font-weight: 500; /* Not too bold, exactly like the image */
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.reason-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7); /* Muted grey text */
+    line-height: 1.4;
+}
+
+.icon-container { 
+    margin-top: auto; 
+    display: flex; 
+    justify-content: flex-end; 
+    padding-top: 20px;
+}
+
+.card-icon { 
+    width: 72px; /* Slightly larger icons to match image */
+    height: auto;
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 950px) {
+    .reasons-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .reasons-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .reasons-section {
+        padding: 30px 5%;
+    }
+}
+
+/* =========================================
+   FAQ SECTION (Matching Picture 114.png)
+   ========================================= */
+
+.faq-section { 
+    padding: 70px 15%; /* Keeps the list centered */
+    background-color: #000;
+    color: #fff;
+}
+
+.faq-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px; /* Space between title and first bar */
+    text-align: left;
+}
+
+.faq-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; /* The small black space between bars */
+}
+
+.faq-item {
+    background-color: #2d2d2d; /* The specific dark grey from the image */
+    padding: 24px 30px; /* Generous padding inside each bar */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth fade when you hover */
+}
+
+.faq-item span {
+    font-size: 1.5rem; /* Makes text large and readable like the image */
+    font-weight: 400;
+}
+
+.faq-item:hover { 
+    background-color: #414141; /* Lighter grey on hover */
+}
+
+.faq-icon { 
+    font-size: 2.5rem; /* Large + icon */
+    font-weight: 300; /* Thin + icon */
+    line-height: 1;
+}
+
+/* Mobile Responsiveness for FAQ */
+@media (max-width: 950px) {
+    .faq-section {
+        padding: 40px 5%; /* Use more screen width on mobile */
+    }
+    .faq-item span {
+        font-size: 1.125rem; /* Smaller text on phones */
+    }
+    .faq-icon {
+        font-size: 2rem;
+    }
+}
+
+
+/* =========================================
+   FOOTER SECTION (Matching Picture 115.png)
+   ========================================= */
+
+.footer-section { 
+    padding: 40px 10% 30px; /* Aligns with the rest of the page */
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+/* "Questions? Contact us." Link */
+.footer-contact {
+    margin-bottom: 30px;
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+/* Footer Links Grid */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.footer-links ul { 
+    list-style: none; 
+    padding: 0;
+}
+
+.footer-links li { 
+    margin-bottom: 12px; 
+}
+
+.footer-links a { 
+    color: rgba(255, 255, 255, 0.7); 
+    text-decoration: underline;
+}
+
+.footer-links a:hover { 
+    color: #fff; /* White on hover */
+}
+
+/* Language Selector Button Style */
+.footer-language {
+    margin-bottom: 20px;
+}
+
+.footer-language select {
+    background: #0f0f0f; /* Dark background */
+    color: white;
+    border: 1px solid #555; /* Grey border */
+    padding: 6px 30px 6px 10px; /* Padding for text */
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    /* This adds the little "Globe" icon look if supported, otherwise just text */
+    background-image: none; 
+    -webkit-appearance: menulist; /* Keeps the arrow */
+}
+
+/* "Netflix Pakistan" Text */
+.footer-region { 
+    font-size: 0.9rem; 
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile Responsiveness for Footer */
+@media (max-width: 950px) {
+    .footer-links {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        padding: 50px 5%; /* Less padding on mobile */
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================= */
+
+/* Tablet and Smaller (Width 950px or less) */
+@media (max-width: 950px) {
+    
+    /* Make the Hero Text smaller */
+    .hero-content h1 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* Stack the Email Input and Red Button */
+    .email-signup, .footer-email-form {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .input-container {
+        width: 100%; /* Input takes full width */
+    }
+
+    input[type="email"] {
+        width: 100%; /* Force input to be wide */
+    }
+
+    .get-started-btn {
+        width: 180px; /* Fixed width for the button on mobile */
+        margin-top: 10px; /* Add space between input and button */
+        height: 48px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Phones (Width 600px or less) */
+@media (max-width: 600px) {
+
+    /* Stack the "Reasons to Join" cards */
+    .reasons-grid {
+        grid-template-columns: 1fr; /* 1 column only */
+    }
+
+    .reasons-section {
+        padding: 30px 5%; /* Less padding on sides */
+    }
+    
+    .header {
+        padding: 20px; /* Smaller header padding */
+    }
+    
+    .logo {
+        width: 100px; /* Smaller logo */
+    }
+    
+    /* Adjust Footer Links to 2 columns instead of 4 */
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
