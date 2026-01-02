@@ -32,9 +32,8 @@ images/ - A folder containing the movie posters and icons.
 Project Documentation
 Screenshots:
  [View Project Screenshots](<./Aict Lab Project/Screenshots/>)
-
 Project Presentation 
 Word Documentation:
-[Download Word Document](<./Aict Lab Project/AICT LAB FINAL PROJECT Word.docx>)
+[Download Word Document](<./Aict Lab Project/AICT-LAB-FINAL-PROJECT-WORD.docx>)
 Excel Documentation:
-[Download Excel Sheet](<./Aict Lab Project/AICT LAB FINAL PROJECT EXCEL.xlsx>)
+[Download Excel Sheet](<./Aict Lab Project/AICT-LAB-FINAL-PROJECT-EXCEL.xlsx>)
