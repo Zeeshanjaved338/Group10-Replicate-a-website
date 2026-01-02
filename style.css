@@ -1,6 +1,4 @@
-/* =========================================
-   GLOBAL RESET & DEFAULTS
-   ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +47,7 @@ body {
 
 .logo { width: 150px; }
 
-/* The small red button in the header */
+/* The sign up button of navbar styling done here */
 .btn-signup {
     background-color: #e50914;
     color: white;
@@ -73,12 +71,19 @@ body {
     padding: 0 20px;
 }
 
-.hero-content h1 { font-size: 3rem; font-weight: 900; margin-bottom: 1rem; }
-.subtitle { font-size: 1.5rem; margin-bottom: 1.5rem; }
-.cta-text { font-size: 1.2rem; margin-bottom: 1.2rem; }
+.hero-content h1 { font-size: 3rem; 
+    font-weight: 900; 
+    margin-bottom: 1rem;
+ }
+.subtitle { font-size: 1.5rem;
+     margin-bottom: 1.5rem;
+     }
+.cta-text { font-size: 1.2rem; 
+    margin-bottom: 1.2rem;
+ }
 
 /* =========================================
-   INPUTS & BUTTONS (Unified Style)
+   INPUTS & BUTTONS SECTION MADE HERE
    ========================================= */
 .email-signup, .footer-email-form {
     display: flex;
@@ -120,19 +125,32 @@ input[type="email"] {
 }
 
 .get-started-btn:hover { background-color: #c11119; }
-.get-started-btn span { margin-left: 10px; font-size: 2rem; line-height: 0; margin-top: -3px; }
+.get-started-btn span { margin-left: 10px; 
+    font-size: 2rem; 
+    line-height: 0; 
+    margin-top: -3px;
+ }
 
 /* =========================================
-   TRENDING SECTION
+   TRENDING SECTION OF CARDS
    ========================================= */
-.trending-section { padding: 50px; background-color: #000; }
-.section-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; }
+.trending-section { padding: 50px; 
+    background-color: #000; }
+.section-title { font-size: 1.5rem; 
+    font-weight: bold;
+     margin-bottom: 20px; 
+    }
 
 .card-container {
-    display: flex; gap: 30px; overflow-x: auto; padding: 20px 0;
+    display: flex; 
+    gap: 30px; 
+    overflow-x: auto; 
+    padding: 20px 0;
     scrollbar-width: none; 
 }
-.card-container::-webkit-scrollbar { display: none; }
+.card-container::-webkit-scrollbar { 
+    display: none;
+ }
 
 .movie-card {
     position: relative;
@@ -156,7 +174,7 @@ input[type="email"] {
     -webkit-text-stroke: 2px #555; z-index: 1; line-height: 1;
 }
 
-/* Card Backgrounds */
+/* Card Backgrounds Images of movies*/
 .card-1 { background-image: url('images/1.jpg'); }
 .card-2 { background-image: url('images/2.jpg'); }
 .card-3 { background-image: url('images/3.jfif'); }
@@ -168,38 +186,36 @@ input[type="email"] {
 .card-9 { background-image: url('images/9.jpg'); }
 .card-10 { background-image: url('images/10.jpg');}
 
-/* Card Popup after clicking on a card of the picture */
+/* Card Popup after clicking on a card of the picture and styling of it */
 
-/* POPUP OVERLAY STyling  */
-
-/* 1. The Overlay: Covers the whole screen but is hidden by default */
+/*  The Overlay: Covers the whole screen but is hidden by default */
 .modal-overlay {
-    display: none; /* Hidden */
+    display: none; 
     position: fixed;
     top: 0; 
     left: 0;
     width: 100%; 
     height: 100%;
-    /* Transparent black background lets you see the page behind it */
+    /* Transparent black background for seeing of bg */
     background-color: rgba(0, 0, 0, 0.7); 
     z-index: 9999;
     justify-content: center;
     align-items: center;
 }
 
-/* 2. THE TRICK: Show modal when the ID is targeted */
+/* Show modal when the ID of modal is target */
 .modal-overlay:target {
     display: flex;
 }
 
-/* 3. Clickable area to close modal */
+/*Click aree to close modal */
 .close-area {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     cursor: default;
 }
 
-/* 4. The Card Box */
+/*The Card Box */
 .modal-card {
     position: relative;
     width: 90%;
@@ -208,14 +224,13 @@ input[type="email"] {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    z-index: 10000; /* Sit on top of the overlay */
+    z-index: 10000; 
 }
 
-/* 5. Banner Image */
+/* Baner bg Image */
 .modal-banner {
     height: 500px;
     width: 100%;
-    /* REPLACE with your Stranger Things image */
     background: url('images/1.jpg') no-repeat top center/cover;
     position: relative;
 }
@@ -227,7 +242,7 @@ input[type="email"] {
     background: linear-gradient(to top, #181818 10%, rgba(24,24,24,0.5) 50%, rgba(0,0,0,0) 100%);
 }
 
-/* 6. Close 'X' Button */
+/* Close 'X' Button of the page */
 .close-btn {
     position: absolute;
     top: 15px; right: 20px;
@@ -238,14 +253,14 @@ input[type="email"] {
     z-index: 10001;
 }
 
-/* 7. Text Content */
+/*Text Content on the card */
 .modal-content {
     position: absolute;
     bottom: 40px; left: 40px; right: 40px;
     color: white;
 }
 
-/* Stranger Things Title Style */
+/* movie Title Style */
 .st-title {
     font-family: 'Times New Roman', serif;
     font-size: 3.5rem;
@@ -302,7 +317,7 @@ input[type="email"] {
    ========================================= */
 
 .reasons-section { 
-    padding: 60px 10%; /* Increased padding for better spacing */
+    padding: 60px 10%; 
     background-color: #000;
     color: #fff;
 }
@@ -317,31 +332,30 @@ input[type="email"] {
 .reasons-grid { 
     display: grid; 
     grid-template-columns: repeat(4, 1fr); 
-    gap: 16px; /* Slightly larger gap */
+    gap: 16px; 
 }
 
 .reason-card {
-    /* Standard Netflix gradient */
     background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
-    border-radius: 16px; /* INCREASED radius to match the rounded look in the image */
-    padding: 32px 24px; /* More padding inside the card */
+    border-radius: 16px; 
+    padding: 32px 24px; 
     min-height: 280px; 
     display: flex; 
     flex-direction: column;
     position: relative;
-    border: none; /* Ensure no border */
+    border: none; 
 }
 
 .reason-card h3 {
     font-size: 1.5rem;
-    font-weight: 500; /* Not too bold, exactly like the image */
+    font-weight: 500; 
     margin-bottom: 12px;
     color: #fff;
 }
 
 .reason-card p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7); /* Muted grey text */
+    color: rgba(255, 255, 255, 0.7); 
     line-height: 1.4;
 }
 
@@ -353,14 +367,14 @@ input[type="email"] {
 }
 
 .card-icon { 
-    width: 72px; /* Slightly larger icons to match image */
+    width: 72px; 
     height: auto;
 }
 
-/* Responsive adjustment for Mobile */
+/* Responsive adjust for phone user */
 @media (max-width: 950px) {
     .reasons-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+        grid-template-columns: 1fr 1fr; /* 2 col on tablets */
     }
 }
 
@@ -374,11 +388,11 @@ input[type="email"] {
 }
 
 /* =========================================
-   FAQ SECTION (Matching Picture 114.png)
+   FAQ SECTION 
    ========================================= */
 
 .faq-section { 
-    padding: 70px 15%; /* Keeps the list centered */
+    padding: 70px 15%; 
     background-color: #000;
     color: #fff;
 }
@@ -386,48 +400,48 @@ input[type="email"] {
 .faq-heading {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 20px; /* Space between title and first bar */
+    margin-bottom: 20px; 
     text-align: left;
 }
 
 .faq-list { 
     display: flex; 
     flex-direction: column; 
-    gap: 8px; /* The small black space between bars */
+    gap: 8px; 
 }
 
 .faq-item {
-    background-color: #2d2d2d; /* The specific dark grey from the image */
-    padding: 24px 30px; /* Generous padding inside each bar */
+    background-color: #2d2d2d; 
+    padding: 24px 30px; 
     display: flex; 
     justify-content: space-between;
     align-items: center; 
     cursor: pointer;
-    transition: background-color 0.2s ease; /* Smooth fade when you hover */
+    transition: background-color 0.2s ease; 
 }
 
 .faq-item span {
-    font-size: 1.5rem; /* Makes text large and readable like the image */
+    font-size: 1.5rem; 
     font-weight: 400;
 }
 
 .faq-item:hover { 
-    background-color: #414141; /* Lighter grey on hover */
+    background-color: #414141; 
 }
 
 .faq-icon { 
-    font-size: 2.5rem; /* Large + icon */
-    font-weight: 300; /* Thin + icon */
+    font-size: 2.5rem; 
+    font-weight: 300; 
     line-height: 1;
 }
 
-/* Mobile Responsiveness for FAQ */
+/* Mobile Responsiveability for FAQ */
 @media (max-width: 950px) {
     .faq-section {
-        padding: 40px 5%; /* Use more screen width on mobile */
+        padding: 40px 5%; 
     }
     .faq-item span {
-        font-size: 1.125rem; /* Smaller text on phones */
+        font-size: 1.125rem; 
     }
     .faq-icon {
         font-size: 2rem;
@@ -436,11 +450,11 @@ input[type="email"] {
 
 
 /* =========================================
-   FOOTER SECTION (Matching Picture 115.png)
+   FOOTER SECTION 
    ========================================= */
 
 .footer-section { 
-    padding: 40px 10% 30px; /* Aligns with the rest of the page */
+    padding: 40px 10% 30px; 
     background-color: #000;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
@@ -481,35 +495,34 @@ input[type="email"] {
 }
 
 .footer-links a:hover { 
-    color: #fff; /* White on hover */
+    color: #fff; 
 }
 
-/* Language Selector Button Style */
+
 .footer-language {
     margin-bottom: 20px;
 }
 
 .footer-language select {
-    background: #0f0f0f; /* Dark background */
+    background: #0f0f0f; 
     color: white;
-    border: 1px solid #555; /* Grey border */
-    padding: 6px 30px 6px 10px; /* Padding for text */
+    border: 1px solid #555; 
+    padding: 6px 30px 6px 10px; 
     border-radius: 4px;
     font-size: 0.9rem;
     cursor: pointer;
-    /* This adds the little "Globe" icon look if supported, otherwise just text */
     background-image: none; 
-    -webkit-appearance: menulist; /* Keeps the arrow */
+    -webkit-appearance: menulist; 
 }
 
-/* "Netflix Pakistan" Text */
+/* "Netflix Pak" Text */
 .footer-region { 
     font-size: 0.9rem; 
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Mobile Responsiveness for Footer */
+/* Mobile Responsive for Foter */
 @media (max-width: 950px) {
     .footer-links {
         grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
@@ -518,7 +531,7 @@ input[type="email"] {
 
 @media (max-width: 600px) {
     .footer-section {
-        padding: 50px 5%; /* Less padding on mobile */
+        padding: 50px 5%; 
     }
 }
 
@@ -527,47 +540,43 @@ input[type="email"] {
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================= */
 
-/* Tablet and Smaller (Width 950px or less) */
 @media (max-width: 950px) {
-    
-    /* Make the Hero Text smaller */
     .hero-content h1 {
-        font-size: 2rem; /* Smaller font for mobile */
+        font-size: 2rem; 
     }
     
     .subtitle {
         font-size: 1.2rem;
     }
 
-    /* Stack the Email Input and Red Button */
     .email-signup, .footer-email-form {
-        flex-direction: column; /* Stacks items vertically */
+        flex-direction: column; 
         align-items: center;
         width: 100%;
     }
 
     .input-container {
-        width: 100%; /* Input takes full width */
+        width: 100%; 
     }
 
     input[type="email"] {
-        width: 100%; /* Force input to be wide */
+        width: 100%; 
     }
 
     .get-started-btn {
-        width: 180px; /* Fixed width for the button on mobile */
-        margin-top: 10px; /* Add space between input and button */
+        width: 180px; 
+        margin-top: 10px; 
         height: 48px;
         font-size: 1.2rem;
     }
 }
 
-/* Mobile Phones (Width 600px or less) */
+/* Mobile Phones  */
 @media (max-width: 600px) {
 
     /* Stack the "Reasons to Join" cards */
     .reasons-grid {
-        grid-template-columns: 1fr; /* 1 column only */
+        grid-template-columns: 1fr; /* 1 column */
     }
 
     .reasons-section {
@@ -575,14 +584,14 @@ input[type="email"] {
     }
     
     .header {
-        padding: 20px; /* Smaller header padding */
+        padding: 20px; /* Smaller header pading */
     }
     
     .logo {
-        width: 100px; /* Smaller logo */
+        width: 100px; /* Small logo */
     }
     
-    /* Adjust Footer Links to 2 columns instead of 4 */
+    /* Adj Foter Links to 2 col */
     .footer-links {
         grid-template-columns: 1fr 1fr;
     }
