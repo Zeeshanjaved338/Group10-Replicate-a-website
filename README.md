@@ -30,10 +30,9 @@ style.css - All the styling for the whole project.
 images/ - A folder containing the movie posters and icons.
 
 Project Documentation
-Screenshots:
- [View Project Screenshots](<E:./Aict Lab Project/Screenshots/>)
-Project Presentation 
 Word Documentation:
-[Download Word Document](<./Aict Lab Project/AICT LAB FINAL PROJECT Word.docx>)
+[Google Docs](https://docs.google.com/document/d/1bbUdGkqKM1J8FkL6jqgcqY_q5rtJsy672nplutrIF94/edit?usp=sharing)
 Excel Documentation:
-[Download Excel Sheet](<./Aict Lab Project/AICT LAB FINAL PROJECT EXCEL.xlsx>)
+[Excel Sheet](https://docs.google.com/spreadsheets/d/1cmhCxx5HBa3x6hWK4mb_9CR_aOHw2wohxkNbXtC0sCM/edit?usp=sharing)
+Powerpoint Documentation:
+[Powerpoint](https://docs.google.com/presentation/d/1ljNHHRyFXHMhKnaGT7qS7Zu38aHexzpWnpCFE8e0h9A/edit?usp=sharing)
