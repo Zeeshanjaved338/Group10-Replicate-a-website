@@ -31,7 +31,7 @@ images/ - A folder containing the movie posters and icons
 
 Project Documentation
 Word Documentation:
-[Google Docs](https://docs.google.com/document/d/1bbUdGkqKM1J8FkL6jqgcqY_q5rtJsy672nplutrIF94/edit?usp=sharing)
+[Word Document](<Project Documentations/AICT LAB FINAL PROJECT WORD.docx>)
 Excel Documentation:
 [Excel Sheet](<Project Documentations/Netflix_Clone_Excel_Data.xlsx>)
 Powerpoint Documentation:
