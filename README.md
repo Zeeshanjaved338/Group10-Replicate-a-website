@@ -27,7 +27,7 @@ signup.htm - The sign-in/login page and its styling.
 
 style.css - All the styling for the whole project.
 
-images/ - A folder containing the movie posters and icons.
+images/ - A folder containing the movie posters and icons
 
 Project Documentation
 Word Documentation:
